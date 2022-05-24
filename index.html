@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/project1.css">
+</head>
+
+
+<body>
+
+<section>
+<header>
+
+	<div class="row ">
+		<div class="col-lg-12 ">
+			<nav class="navbar navbar-expand-lg bg-light  navbar-light ">
+			  <!-- Brand -->
+			  <a class="navbar-brand" href="#"></a>
+			  <h4 class="px-3">my<span class="text-danger">perfect</span>resume</h4>
+			  <!-- Toggler/collapsibe Button -->
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <!-- Navbar links -->
+			  <div class="collapse navbar-collapse justify-content-center " id="collapsibleNavbar">
+				<ul class="navbar-nav ">
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Heading</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Work-history</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Education</a>
+				  </li>
+				   <li class="nav-item">
+					<a class="nav-link" href="#">Skills</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Summary</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Finalize</a>
+				  </li>
+				</ul>
+			    </div>
+			</nav>
+
+		</div>
+
+</div>
+
+</header>
+</section>
+
+
+<section class="pt-5">
+<div class="container">
+	<div class="row">
+
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-lg-12">
+				<h2 class="py-3">What’s the best way for employers to contact you?</h2>
+
+				<p class=" px-1">We suggest including an email and phone number.</p>
+				</div>
+
+
+			 <!-- Add details -->
+			
+			
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="name1">FIRST NAME</label>
+						<input type="text" class="form-control" placeholder="e.g. Saanvi" id="name" onkeyup="resume()">
+					</div> 
+				</div>
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="surename">SURNAME</label>
+						<input type="text" class="form-control" placeholder="e.g. Patel" id="surname" onkeyup="resume()">
+					</div>
+				</div>
+
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="city">CITY</label>
+						<input type="text" class="form-control" placeholder="e.g. New Delhi" id="city" onkeyup="resume()">
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="form-group">
+						<label for="city">COUNTRY</label>
+						<input type="text" class="form-control" placeholder="e.g. India" id="country" onkeyup="resume()">
+					</div>
+				</div>
+			
+				<div class="col-lg-3">
+					<div class="form-group">
+						<label for="pincode">PINCODE</label>
+						<input type="text" class="form-control" placeholder="e.g. 110034" id="pincode" onkeyup="resume()">
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="phone">PHONE</label>
+						<input type="text" class="form-control" placeholder="e.g. +91 22 1234 5678" id="phone" onkeyup="resume()">
+					</div>
+				</div>
+
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="email">EMAIL</label>
+						<input type="text" class="form-control" placeholder="e.g. saanvipatel@gmail.com" id="email" onkeyup="resume()">
+					</div>
+
+				   <button type="button" class="aa"><font-awesome-icon icon="fa-solid fa-arrow-left" />Back</button>
+
+				</div>
+
+
+			</div>
+		</div>
+
+				<!--  details resume add -->
+
+				<div class="bluebox col-lg-6" >
+	 
+					<div class="container">
+					  
+						<div class="col-lg-12 in"  data-toggle="modal" data-target="#myModal"  onclick="document.getElementById('resumemodal').innerHTML=this.innerHTML">
+					 
+							<div class="col-lg-12 card ">
+								<div class="row">
+										  
+									<div class="col-lg-4 card py-5 a">
+										<div class="card-body">
+									      <h1 class="text-white" style="font-weight:normal;" id="sortname">YN</h1>
+										</div>
+									</div> 
+								  
+									  <div class="col-lg-8 card bg-light">
+										  <div class="card-body">
+												  
+												  <p> <span id="namecontain"> </span></p>
+												  
+												  <p> <span id="surnamecontain"> </span></p>
+											</div>
+									  </div>
+								  
+								</div>
+							</div>
+							
+						<div class="col-lg-12 card">
+							<div class="row">
+									  
+								<div class="col-lg-4 b">
+							  
+									<p class="drop"> <span id="phonecontain"></span></p>
+									  
+								</div> 
+							  
+							  <div class="col-lg-8 card d">
+									<div class="card-body">
+									  
+									  <p> <span id="countrycontain"></span></p>
+									  
+									  <p> <span id="pincodecontain"></span></p>
+									  
+									  <p> <span id="citycontain"></span></p>
+									  
+									  <p> <span id="emailcontain"></span></p>
+										
+									</div>
+							  </div>
+							  
+							</div>
+						</div>
+						  
+						  
+							<div class="col-lg-12 card z">
+							
+								<div class="row">
+								
+										<div class="col-lg-4 a">
+										
+											<h2>Skills</h2>
+											
+												<ul class="text-muted h6">
+
+													<li>Store opening and closing</li>
+													<li>Sales expertise</li>
+													<li>Accurate Money Handling</li>
+													<li>Store Merchandising</li>
+													<li>Loss prevention</li>
+													<li>Product promotions</li>
+													<li>Guest Services</li>
+													<li>Point of Sale Systems</li>
+												</ul>
+										</div>
+								
+										
+										<div class="col-lg-8 bg-light">
+										
+											<h4 class="my-4">Professional Summary</h4>
+											
+												<p class="text-muted">
+												Motivated Sales Associate with 5 years of experience boosting sales and customer loyalty through individualized service. Resourceful expert at learning customer needs, directing to desirable merchandise and upselling to meet sales quotas. Committed to strengthening customer experiences with positivity and professionalism when answering requests and processing sales.
+												</p>
+												
+											<hr class="my-4">
+
+											<h4>Work History</h4>
+											
+												<h6>May 2016-Current</h6>
+												<h6><b>Retail Sales Associate.</b>H&M,New Delhi,India</h6>
+
+												<ul class="text-muted">
+												<li>Effectively upsold products by introducing accessories and other add-ons, adding ₹3000 to average monthly sales.</li>
+												
+												<li>Generated brand awareness and positive product impressions to increase sales 22%.</li>
+												
+												<li>Used consultative sales approach to understand customer needs and recommend relevant offerings.</li>
+												</ul>
+
+												<h6>january 2015 - March 2016</h6>
+												<h6><b>Barista,</b>Starbucks,New Delhi,India</h6>
+												
+												<ul class="text-muted">
+												<li>Create over 60 drinks per hour with consistently customer satisfaction scores.</li>
+												
+												<li>Learned every menu preparation and numerous off-label drinks to meet all customerneeds.</li>
+												
+												<li>Upsold backed goods and extra shots with beverages, increasing store sales  rs.3800 per month.</li>
+												</ul>
+												
+												<h3 class="text-primary"><b>EDUCATION</b></h3>
+												
+												<h5>June 2016</h5>
+												<h5><b>Diploma,</b>Finacial Accounting</h5>
+												<h5><b>Oxford Software Institute & Oxfond School Of English,</b>New Delhi,India</h5>
+												
+										
+										</div>
+								</div>
+								
+							</div>
+							
+						</div>
+
+					</div>
+
+				</div>
+	   <button type="button" class="bb">Preview</button>
+	</div>
+</div>
+
+</section>
+
+
+
+
+
+<!-- <!-- The Modal --> -->
+<!-- <div class="modal" id="myModal"> -->
+  <!-- <div class="modal-dialog"> -->
+  
+  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">close</button> -->
+ 
+  		  
+						<!-- <div class="col-lg-12 in"> -->
+					 
+							<!-- <div class="col-lg-12 card "> -->
+								<!-- <div class="row"> -->
+										  
+									<!-- <div class="col-lg-4 card py-5 a"> -->
+										<!-- <div class="card-body"> -->
+									  
+										<!-- </div> -->
+									<!-- </div>  -->
+								  
+									  <!-- <div class="col-lg-8 card bg-light"> -->
+										  <!-- <div class="card-body"> -->
+												  
+												  <!-- <p> <span id="namecontain"> </span></p> -->
+												  
+												  <!-- <p> <span id="surnamecontain"> </span></p> -->
+											<!-- </div> -->
+									  <!-- </div> -->
+								  
+								<!-- </div> -->
+							<!-- </div> -->
+							
+						<!-- <div class="col-lg-12 card"> -->
+							<!-- <div class="row"> -->
+									  
+								<!-- <div class="col-lg-4 b"> -->
+							  
+									<!-- <p> <span id="phonecontain"></span></p> -->
+									  
+								<!-- </div>  -->
+							  
+							  <!-- <div class="col-lg-8 card d"> -->
+									<!-- <div class="card-body"> -->
+									  
+									  <!-- <p> <span id="countrycontain"></span></p> -->
+									  
+									  <!-- <p> <span id="pincodecontain"></span></p> -->
+									  
+									  <!-- <p> <span id="citycontain"></span></p> -->
+									  
+									  <!-- <p> <span id="emailcontain"></span></p> -->
+										
+									<!-- </div> -->
+							  <!-- </div> -->
+							  
+							<!-- </div> -->
+						<!-- </div> -->
+						  
+						  
+							<!-- <div class="col-lg-12 card z"> -->
+							
+								<!-- <div class="row"> -->
+								
+										<!-- <div class="col-lg-4 a"> -->
+										
+											<!-- <h2>Skills</h2> -->
+											
+												<!-- <ul class="text-muted h6"> -->
+
+													<!-- <li>Store opening and closing</li> -->
+													<!-- <li>Sales expertise</li> -->
+													<!-- <li>Accurate Money Handling</li> -->
+													<!-- <li>Store Merchandising</li> -->
+													<!-- <li>Loss prevention</li> -->
+													<!-- <li>Product promotions</li> -->
+													<!-- <li>Guest Services</li> -->
+													<!-- <li>Point of Sale Systems</li> -->
+												<!-- </ul> -->
+										<!-- </div> -->
+								
+										
+										<!-- <div class="col-lg-8 bg-light"> -->
+										
+											<!-- <h4 class="my-4">Professional Summary</h4> -->
+											
+												<!-- <p class="text-muted"> -->
+												<!-- Motivated Sales Associate with 5 years of experience boosting sales and customer loyalty through individualized service. Resourceful expert at learning customer needs, directing to desirable merchandise and upselling to meet sales quotas. Committed to strengthening customer experiences with positivity and professionalism when answering requests and processing sales. -->
+												<!-- </p> -->
+												
+											<!-- <hr class="my-4"> -->
+
+											<!-- <h4>Work History</h4> -->
+											
+												<!-- <h6>May 2016-Current</h6> -->
+												<!-- <h6><b>Retail Sales Associate.</b>H&M,New Delhi,India</h6> -->
+
+												<!-- <ul class="text-muted"> -->
+												<!-- <li>Effectively upsold products by introducing accessories and other add-ons, adding ₹3000 to average monthly sales.</li> -->
+												
+												<!-- <li>Generated brand awareness and positive product impressions to increase sales 22%.</li> -->
+												
+												<!-- <li>Used consultative sales approach to understand customer needs and recommend relevant offerings.</li> -->
+												<!-- </ul> -->
+
+												<!-- <h6>january 2015 - March 2016</h6> -->
+												<!-- <h6><b>Barista,</b>Starbucks,New Delhi,India</h6> -->
+												
+												<!-- <ul class="text-muted"> -->
+												<!-- <li>Create over 60 drinks per hour with consistently customer satisfaction scores.</li> -->
+												
+												<!-- <li>Learned every menu preparation and numerous off-label drinks to meet all customerneeds.</li> -->
+												
+												<!-- <li>Upsold backed goods and extra shots with beverages, increasing store sales  rs.3800 per month.</li> -->
+												<!-- </ul> -->
+												
+												<!-- <h3 class="text-primary"><b>EDUCATION</b></h3> -->
+												
+												<!-- <h5>June 2016</h5> -->
+												<!-- <h5><b>Diploma,</b>Finacial Accounting</h5> -->
+												<!-- <h5><b>Oxford Software Institute & Oxfond School Of English,</b>New Delhi,India</h5> -->
+												
+										
+										<!-- </div> -->
+								<!-- </div> -->
+								
+							<!-- </div> -->
+							
+						<!-- </div> -->
+
+  <!-- </div> -->
+<!-- </div> -->
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">MY RESUME</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="resumemodal">
+               
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+
+function resume()
+{
+var namedata=document.getElementById("name").value;
+var surnamedata=document.getElementById("surname").value;
+//document.getElementById('sortname').innerHTML = name.substr(0, 1) + surname.substr(0, 1);
+var citydata=document.getElementById("city").value;
+var countrydata=document.getElementById("country").value;
+var pincodedata=document.getElementById("pincode").value;
+var phonedata=document.getElementById("phone").value;
+var emaildata=document.getElementById("email").value;
+
+
+
+
+document.getElementById("namecontain").innerHTML=namedata;
+document.getElementById("surnamecontain").innerHTML=surnamedata;
+document.getElementById("citycontain").innerHTML=citydata;
+document.getElementById("countrycontain").innerHTML=countrydata;
+document.getElementById("pincodecontain").innerHTML=pincodedata;
+document.getElementById("phonecontain").innerHTML=phonedata;
+document.getElementById("emailcontain").innerHTML=emaildata;
+
+
+}
+
+
+
+
+
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
